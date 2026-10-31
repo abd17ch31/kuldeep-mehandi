@@ -1,0 +1,214 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #0b0f1a;
+  color: #fff;
+  padding: 40px 20px;
+}
+
+/* =======================
+   TITLE
+======================= */
+
+.title {
+  text-align: center;
+  font-size: 38px;
+  margin-bottom: 50px;
+  letter-spacing: 1px;
+}
+
+/* =======================
+   CATEGORY CARDS (3–3)
+======================= */
+
+.card-container {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+}
+
+.card {
+  position: relative;
+  height: 210px;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-end;
+  padding: 22px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.45s ease, box-shadow 0.45s ease;
+}
+
+/* Dark overlay */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85),
+    rgba(0, 0, 0, 0.25)
+  );
+  z-index: 0;
+}
+
+.card span {
+  position: relative;
+  z-index: 1;
+}
+
+/* Hover */
+.card:hover {
+  transform: translateY(-12px) scale(1.04);
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.65);
+}
+
+/*CARD BACKGROUNDS*/
+
+.card[data-category="bridal"] {
+  background-image: url("bridall/bridal\ cover.jpg");
+}
+.card[data-category="festival"] {
+  background-image: url("guest/g1.jpg");
+}
+.card[data-category="normal"] {
+  background-image: url("guest/f1.PNG");
+}
+.card[data-category="baby"] {
+  background-image: url("guest/bs1.PNG");
+}
+.card[data-category="guest"] {
+  background-image: url("guest/gt1.jpg");
+}
+.card[data-category="figure"] {
+  background-image: url("guest/nm1.jpg");
+}
+
+
+   /* POPUP MODAL */
+
+
+.popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  position: relative;
+  background: #020617;
+  width: 92%;
+  max-width: 950px;
+  border-radius: 18px;
+  padding: 55px 30px 30px; /* top padding for close button */
+  animation: scaleIn 0.35s ease;
+}
+
+/* Close button (FIXED) */
+.close-btn {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  font-size: 34px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 20;
+  line-height: 1;
+}
+
+.close-btn:hover {
+  transform: rotate(90deg);
+}
+
+/* Popup animation */
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.popup-content h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 28px;
+}
+
+/* =======================
+   IMAGE GRID
+======================= */
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 18px;
+}
+
+.image-grid img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.image-grid img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* =======================
+   RESPONSIVE
+======================= */
+
+@media (max-width: 900px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .card {
+    height: 180px;
+    font-size: 20px;
+  }
+
+  .popup-content {
+    padding: 50px 18px 20px;
+  }
+
+  .close-btn {
+    font-size: 30px;
+    top: 12px;
+    right: 14px;
+  }
+}
+ 

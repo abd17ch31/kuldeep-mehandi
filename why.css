@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #020617;
+  color: #e5e7eb;
+}
+
+/* =======================
+   HERO SECTION (WITH IMAGE)
+======================= */
+
+.why-hero {
+  padding: 50px 20px;
+  text-align: center;
+  color: #ffffff;
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.65),
+      rgba(0, 0, 0, 0.65)
+    ),
+    url("https://images.unsplash.com/photo-1600180758890-6b94519c72a5");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.why-hero h1 {
+  font-size: 52px;
+  margin-bottom: 20px;
+  text-shadow: 0 10px 30px rgba(0,0,0,0.7);
+}
+
+.why-hero p {
+  max-width: 800px;
+  margin: auto;
+  font-size: 18px;
+  line-height: 1.7;
+  text-shadow: 0 6px 20px rgba(0,0,0,0.6);
+}
+
+/* =======================
+   WHY SECTIONS (WITH IMAGES)
+======================= */
+
+.why-section {
+  position: relative;
+  padding: 100px 20px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Dark overlay for readability */
+.why-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.78);
+  z-index: 0;
+}
+
+.why-text {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.why-text h2 {
+  font-size: 34px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.why-text p {
+  font-size: 17px;
+  line-height: 1.9;
+  color: #e5e7eb;
+}
+
+/* =======================
+   INDIVIDUAL SECTION IMAGES
+   (order depends on HTML)
+======================= */
+
+/* Experienced Artists */
+.why-section:nth-of-type(2) {
+  background-image: url("imagesss/13.jpeg");
+}
+
+/* Premium Mehandi */
+.why-section:nth-of-type(3) {
+  background-image: url("imagesss/12.jpeg");
+}
+
+/* Custom Designs */
+.why-section:nth-of-type(4) {
+  background-image: url("imagesss/14.jpeg");
+}
+
+/* Professional Service */
+.why-section:nth-of-type(5) {
+  background-image: url("imagesss/38.jpeg");
+}
+
+/* All Over India */
+.why-section:nth-of-type(6) {
+  background-image: url("https://images.unsplash.com/photo-1600180758890-6b94519c72a5");
+}
+
+/* =======================
+   RESPONSIVE
+======================= */
+
+@media (max-width: 900px) {
+  .why-hero h1 {
+    font-size: 38px;
+  }
+
+  .why-text h2 {
+    font-size: 26px;
+  }
+
+  .why-text p {
+    font-size: 15px;
+  }
+
+  .why-section {
+    padding: 70px 15px;
+  }
+}
+
+@media (max-width: 500px) {
+  .why-hero {
+    padding: 90px 15px;
+  }
+
+  .why-hero p {
+    font-size: 16px;
+  }
+}

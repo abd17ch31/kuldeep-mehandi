@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment - Sun Tattoo Studio</title>
+    <link rel="stylesheet" href="bookingp.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Cinzel:wght@400;600;700&family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="booking-header">
+        <div class="booking-header-container">
+            <h1 class="booking-main-heading">BOOK YOUR APPOINTMENT</h1>
+            <p class="booking-subheading">Schedule Your Mehandi Session With Our Experts</p>
+        </div>
+    </header>
+
+    <!-- Booking Form Section -->
+    <main class="booking-content">
+        <div class="booking-content-container">
+            <section class="booking-section">
+                <div class="booking-form-card">
+                    <form class="booking-form" id="bookingForm">
+                        <!-- Full Name Field -->
+                        <div class="booking-form-group">
+                            <label for="bookingName" class="booking-label">
+                                <i class="fas fa-user"></i>
+                                Full Name
+                            </label>
+                            <input 
+                                type="text" 
+                                id="bookingName" 
+                                name="name" 
+                                class="booking-input" 
+                                placeholder="Enter your full name"
+                                required
+                            >
+                        </div>
+
+                        <!-- Phone Number Field -->
+                        <div class="booking-form-group">
+                            <label for="bookingPhone" class="booking-label">
+                                <i class="fas fa-phone"></i>
+                                Phone Number
+                            </label>
+                            <input 
+                                type="tel" 
+                                id="bookingPhone" 
+                                name="phone" 
+                                class="booking-input" 
+                                placeholder="Enter your phone number"
+                                required
+                            >
+                        </div>
+
+                        <!-- Appointment Date Field -->
+                        <div class="booking-form-group">
+                            <label for="bookingDate" class="booking-label">
+                                <i class="fas fa-calendar-alt"></i>
+                                Appointment Date
+                            </label>
+                            <input 
+                                type="date" 
+                                id="bookingDate" 
+                                name="date" 
+                                class="booking-input" 
+                                required
+                            >
+                        </div>
+
+                        <!-- City Field -->
+                        <div class="booking-form-group">
+                            <label for="bookingCity" class="booking-label">
+                                <i class="fas fa-map-marker-alt"></i>
+                                City
+                            </label>
+                            <input 
+                                type="text" 
+                                id="bookingCity" 
+                                name="city" 
+                                class="booking-input" 
+                                placeholder="Enter your city"
+                                required
+                            >
+                        </div>
+
+                        <!-- State Field -->
+                        <div class="booking-form-group">
+                            <label for="bookingState" class="booking-label">
+                                <i class="fas fa-map"></i>
+                                State
+                            </label>
+                            <input 
+                                type="text" 
+                                id="bookingState" 
+                                name="state" 
+                                class="booking-input" 
+                                placeholder="Enter your state"
+                                required
+                            >
+                        </div>
+
+                        <!-- Special Request Field -->
+                        <div class="booking-form-group">
+                            <label for="bookingRequest" class="booking-label">
+                                <i class="fas fa-comment-alt"></i>
+                                Special Request
+                            </label>
+                            <textarea 
+                                id="bookingRequest" 
+                                name="request" 
+                                class="booking-textarea" 
+                                placeholder="Tell us about your mehandi idea, style preference, or any special requests..."
+                                rows="5"
+                            ></textarea>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="booking-form-group booking-submit-group">
+                            <button type="submit" class="booking-submit-btn" id="bookingSubmitBtn">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>BOOK APPOINTMENT</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="bookingp.js"></script>
+</body>
+</html>
